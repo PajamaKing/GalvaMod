@@ -1,0 +1,15 @@
+[tile]
+
+[object]
+
+[item]
+Exp=Experience
+
+[itemtooltip]
+Exptip=The essence of life, dropped by those who aims to take it.
+
+[mob]
+examplemob=Example Mob
+
+[buff]
+examplebuff=Example Buff
