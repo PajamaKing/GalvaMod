@@ -17,18 +17,7 @@ public class GalvaPlayers
 
     public static GalvaPlayer getCurrentPlayer(PlayerMob playerMob)
     {
-        for (GalvaPlayer player : Players)
-        {
-            if (player.PlayerName.equals(playerMob.playerName))
-            {
-                player.playerMob = playerMob;
-                return player;
-            }
-        }
-        GalvaPlayer newPlayer = new GalvaPlayer(playerMob);
-        newPlayer.PrintStats();
-        Players.add(newPlayer);
-        return newPlayer;
+        return getCurrentPlayer(playerMob.playerName);
     }
 
     //caution on usage
@@ -38,6 +27,15 @@ public class GalvaPlayers
         {
             if (player.PlayerName.equals(name)) return player;
         }
-        return null;
+        GalvaPlayer newPlayer = new GalvaPlayer(name);
+        newPlayer.PrintStats();
+        Players.add(newPlayer);
+        return newPlayer;
+    }
+
+    public static void RemovePlayer(String name)
+    {
+        GalvaPlayer player = getCurrentPlayer(name);
+        Players.remove(player);
     }
 }

@@ -81,6 +81,6 @@ public class AddStatusPacket extends Packet {
         player.Wisdom.value = Wis;
         player.Level.value = Lev;
         player.PrintStats();
-        player.ApplyStats(player.playerMob, Con, Str, Dex, Int, Wis, Lev);
+        player.ApplyStats(client.playerMob, Con, Str, Dex, Int, Wis, Lev);
     }
 }

@@ -23,17 +23,15 @@ public class GalvaPlayer extends LevelHolder {
     public GalvaAttribute Strength;
     public GalvaAttribute Intelligence;
     public GalvaAttribute Wisdom;
-    public PlayerMob playerMob;
-    public GalvaPlayer(PlayerMob playerMob)
+    public GalvaPlayer(String name)
     {
-        PlayerName = playerMob.playerName;
+        PlayerName = name;
         Constitution = new Constitution();
         Dexterity= new Dexterity();
         Strength= new Strength();
         Intelligence= new Intelligence();
         Wisdom= new Wisdom();
         Level= new GalvaLevel();
-        this.playerMob = playerMob;
     }
     public static void Init()
     {

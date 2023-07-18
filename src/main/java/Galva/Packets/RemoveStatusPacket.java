@@ -38,6 +38,6 @@ public class RemoveStatusPacket extends Packet {
     {
         System.out.println("Removing Stats Server! " + Name);
         GalvaPlayer player = GalvaPlayers.getCurrentPlayer(Name);
-        player.RemoveStats(player.playerMob);
+        player.RemoveStats(client.playerMob);
     }
 }
