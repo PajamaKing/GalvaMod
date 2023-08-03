@@ -1,14 +1,13 @@
 package Galva.Leveling;
 
 public class BiomeLevelMultiplier {
-    Class biome;
+    String biome;
     int value;
 
-    public BiomeLevelMultiplier(Class biome, int value)
+    public BiomeLevelMultiplier(String className, int value)
     {
-        this.biome = biome;
+        this.biome = className;
         this.value = value;
     }
-
 }
 
