@@ -165,7 +165,8 @@ public class GalvaPlayer extends LevelHolder {
     }
 
     //Should only be used in packets or server side commands
-    public void RemoveStats(PlayerMob player){
+    public void RemoveStats(PlayerMob player)
+    {
         if (GetActiveAttributeBuff(player, Constitution) != null)
         {
             player.buffManager.removeBuff(GetActiveAttributeBuff(player, Constitution), true);

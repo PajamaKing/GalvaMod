@@ -23,7 +23,5 @@ public class AttributeSaver
         saveData.addInt("Wisdom", player.Wisdom.value);
         saveData.addInt("Level", player.Level.value);
         saveData.addInt("Experience", player.Experience);
-
-        GalvaPlayers.RemovePlayer(player.PlayerName);
     }
 }

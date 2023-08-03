@@ -7,7 +7,7 @@ plugins {
 
 project.ext.modID = "galva" // The unique id of your mod. Must be all lowercase and cannot use special characters.
 project.ext.modName = "Galva - Attributes" // The display name of your mod.
-project.ext.modVersion = "1.4.4" // Your current builds version. Must follow the xx.xx... format.
+project.ext.modVersion = "1.4.6" // Your current builds version. Must follow the xx.xx... format.
 project.ext.gameVersion = "0.21.29" // The target game version.
 project.ext.modDescription = "Simple mod that add statuses to your game, to make different builds more viable. Galvanization at it's finest." // Short description of what your mod is.
 project.ext.author = "Pyjama_King" // Your name

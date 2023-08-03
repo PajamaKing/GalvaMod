@@ -14,6 +14,7 @@ public class AttributeLoader
     @Advice.OnMethodExit
     static void LoadAttributes(@Advice.This PlayerMob playerMob, @Advice.Argument(0) LoadData loadData)
     {
+        GalvaPlayers.RemovePlayer(playerMob.playerName);
         System.out.println("Entering Load Attributes!");
         GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
         player.Constitution.value = TryGetSaveData(loadData, "Constitution");
