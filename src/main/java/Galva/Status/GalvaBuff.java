@@ -2,6 +2,7 @@ package Galva.Status;
 
 import Galva.Status.Attributes.GalvaLevel;
 import necesse.entity.mobs.buffs.ActiveBuff;
+import necesse.entity.mobs.buffs.BuffEventSubscriber;
 import necesse.entity.mobs.buffs.BuffModifiers;
 import necesse.entity.mobs.buffs.staticBuffs.Buff;
 
@@ -23,8 +24,7 @@ public class GalvaBuff extends Buff {
     }
 
     @Override
-    public void init(ActiveBuff activeBuff)
-    {
+    public void init(ActiveBuff activeBuff, BuffEventSubscriber buffEventSubscriber) {
         for (int i = 0; i < buffModifiers.size(); i++) {
 
             if (buffModifiers.get(i).modifier == BuffModifiers.INCOMING_DAMAGE_MOD)

@@ -19,6 +19,8 @@ import necesse.entity.mobs.PlayerMob;
 import necesse.gfx.GameResources;
 import necesse.level.maps.Level;
 
+import static Galva.Galva.MaxLevel;
+
 public class AddExpPacket extends Packet {
 
     public final int value;
@@ -48,12 +50,14 @@ public class AddExpPacket extends Packet {
 
     @Override
     public void processClient(NetworkPacket packet,  Client client) {
-        System.out.println("[CLIENT] Adding XP " + value + " to player " + Name);
         PlayerMob playerMob = client.getPlayer();
         GalvaPlayer player = GalvaPlayers.getCurrentPlayer(client.getPlayer());
+        if (player.Level.value >= MaxLevel) return;
+        System.out.println("[CLIENT] Adding XP " + value + " to player " + Name);
 
         //Returns true on level up
         Level level = client.getLevel();
+
         if (player.AddXP(value)) 
         {
             try
