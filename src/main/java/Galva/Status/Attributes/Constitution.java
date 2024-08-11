@@ -11,8 +11,8 @@ public class Constitution extends GalvaAttribute
         buffModifiers.add(new GalvaModifier(BuffModifiers.MAX_HEALTH, 0.025f));
         buffModifiers.add(new GalvaModifier(BuffModifiers.INCOMING_DAMAGE_MOD, 0.01f));
         buffModifiers.add(new GalvaModifier(BuffModifiers.KNOCKBACK_OUT, 0.01f));
-        buffModifiers.add(new GalvaModifier(BuffModifiers.REGEN, 0.01f));
-        buffModifiers.add(new GalvaModifier(BuffModifiers.COMBAT_REGEN, 0.01f));
+        buffModifiers.add(new GalvaModifier(BuffModifiers.HEALTH_REGEN, 0.01f));
+        buffModifiers.add(new GalvaModifier(BuffModifiers.COMBAT_HEALTH_REGEN, 0.01f));
         buffModifiers.add(new GalvaModifier(BuffModifiers.STAMINA_CAPACITY, 0.01f));
         buffModifiers.add(new GalvaModifier(BuffModifiers.STAMINA_USAGE, -0.01f));
         buffModifiers.add(new GalvaModifier(BuffModifiers.STAMINA_REGEN, 0.01f));

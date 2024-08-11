@@ -39,7 +39,7 @@ public class GalvaPlayer extends LevelHolder {
     }
 
     public void LoadAttributes(PlayerMob player){
-        System.out.println("Adding stuff");
+        System.out.println("Reading buffs to set stuff");
         Constitution.value = GetActiveAttributeValue(player, Constitution);
         Strength.value = GetActiveAttributeValue(player, Strength);
         Dexterity.value = GetActiveAttributeValue(player, Dexterity);

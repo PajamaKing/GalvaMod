@@ -2,11 +2,9 @@ package Galva.Packets;
 
 import Galva.Leveling.ExpText;
 import Galva.Leveling.LevelUpText;
-import Galva.Menus.GalvaFormManager;
 import Galva.Menus.GalvaInventoryButton;
 import Galva.Status.GalvaPlayer;
 import Galva.Status.GalvaPlayers;
-import necesse.engine.Screen;
 import necesse.engine.network.NetworkPacket;
 import necesse.engine.network.Packet;
 import necesse.engine.network.PacketReader;
@@ -15,6 +13,7 @@ import necesse.engine.network.client.Client;
 import necesse.engine.network.server.Server;
 import necesse.engine.network.server.ServerClient;
 import necesse.engine.sound.SoundEffect;
+import necesse.engine.sound.SoundManager;
 import necesse.entity.mobs.PlayerMob;
 import necesse.gfx.GameResources;
 import necesse.level.maps.Level;
@@ -67,7 +66,8 @@ public class AddExpPacket extends Packet {
                 if (level != null){
                     level.hudManager.addElement(text);
                 }
-                Screen.playSound(GameResources.jingle, SoundEffect.effect(playerMob));
+
+                SoundManager.playSound(GameResources.jingle, SoundEffect.effect(playerMob));
             }
             catch (Exception e)
             {

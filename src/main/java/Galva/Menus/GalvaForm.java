@@ -2,13 +2,12 @@ package Galva.Menus;
 
 import Galva.Status.Attributes.GalvaAttribute;
 import Galva.Status.GalvaPlayers;
-import Galva.Status.GalvaBuff;
 import Galva.Status.GalvaPlayer;
-import necesse.engine.GameCache;
-import necesse.engine.Screen;
-import necesse.engine.control.InputEvent;
+import necesse.engine.input.InputEvent;
+import necesse.engine.gameLoop.tickManager.TickManager;
 import necesse.engine.network.client.Client;
-import necesse.engine.tickManager.TickManager;
+import necesse.engine.window.GameWindow;
+import necesse.engine.window.WindowManager;
 import necesse.entity.mobs.PlayerMob;
 import necesse.gfx.fairType.FairType;
 import necesse.gfx.forms.Form;
@@ -22,11 +21,6 @@ import static Galva.Galva.MaxLevel;
 import static Galva.Galva.MaxStatLevel;
 
 public class GalvaForm extends Form {
-    int conSubPoints;
-    int strSubPoints;
-    int dexSubPoints;
-    int intSubPoints;
-    int wisSubPoints;
     FormTextButton Con;
     FormTextButton Str;
     FormTextButton Dex;
@@ -40,7 +34,8 @@ public class GalvaForm extends Form {
     public GalvaForm() {
         super("Attributes", 500, 330);
 
-        setPosition(Screen.getHudWidth()/2 - 250,150);
+        GameWindow window = WindowManager.getWindow();
+        setPosition(window.getHudWidth()/2 - 250,150);
 
     }
 

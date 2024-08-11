@@ -15,7 +15,7 @@ public class GalvaFormManager
                               @Advice.FieldValue(value = "client") Client client) {
         GalvaInventoryButton btn = new GalvaInventoryButton(formManager, client);
         formManager.rightQuickbar.addButton(btn);
-        formManager.rightQuickbar.updateButtons();
+        formManager.rightQuickbar.updateButtons(true);
 
     }
 }
