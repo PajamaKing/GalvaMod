@@ -1,11 +1,13 @@
 package Galva;
 
+import Galva.Commands.LevelCommand;
 import Galva.Packets.AddExpPacket;
 import Galva.Packets.AddStatusPacket;
 import Galva.Packets.GetStatusPacket;
 import Galva.Packets.RemoveStatusPacket;
 import Galva.Status.Attributes.*;
 import Galva.Status.GalvaPlayer;
+import necesse.engine.commands.CommandsManager;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.engine.registries.BuffRegistry;
 import necesse.engine.registries.MusicRegistry;
@@ -23,8 +25,7 @@ public class Galva {
         InitItems();
         InitBuffs();
         InitPackets();
-
-
+        InitCommands();
     }
 
     public void InitItems()
@@ -62,6 +63,10 @@ public class Galva {
         PacketRegistry.registerPacket(RemoveStatusPacket.class);
         PacketRegistry.registerPacket(AddExpPacket.class);
         PacketRegistry.registerPacket(GetStatusPacket.class);
+    }
+
+    public void InitCommands(){
+        CommandsManager.registerServerCommand(new LevelCommand());
     }
 
     public void initResources(){

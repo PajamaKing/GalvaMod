@@ -64,7 +64,7 @@ public class GetStatusPacket extends Packet {
         System.out.println("Received Stats " + Con + "-" + Str + "-" + Dex + "-" + Int + "-" + Wis + "-" + Lev
                 + "-" + Exp + "!");
         PlayerMob playerMob = client.getPlayer();
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
         player.Constitution.value = Con;
         player.Strength.value = Str;
         player.Dexterity.value = Dex;
@@ -81,7 +81,7 @@ public class GetStatusPacket extends Packet {
 
     @Override
     public void processServer(NetworkPacket packet, Server server, ServerClient client) {
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(Name);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(Name);
         System.out.println("Sending Stats " + Con + "-" + Str + "-" + Dex + "-" + Int + "-" + Wis + "-" + Lev
                 + "-" + Exp + " for player" + Name + "!");
         player.SendGetAttributesPacket(client, Name);

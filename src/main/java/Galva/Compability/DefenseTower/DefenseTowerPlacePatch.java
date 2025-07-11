@@ -28,7 +28,7 @@ public class DefenseTowerPlacePatch
             {
                 return;
             }
-            GalvaPlayer player = GalvaPlayers.getCurrentPlayer(client.getPlayer());
+            GalvaPlayer player = GalvaPlayers.getPlayerByName(client.getPlayer());
             player.SendDeleteAttributesPacket(client);
             player.SendAddAttributesPacket(client);
         }

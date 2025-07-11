@@ -57,7 +57,7 @@ public class AddStatusPacket extends Packet {
     @Override
     public void processClient(NetworkPacket packet, Client client) {
         System.out.println("Adding Stats Client!");
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(client.getPlayer());
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(client.getPlayer());
         player.PrintStats();
         player.Constitution.value = Con;
         player.Strength.value = Str;
@@ -72,7 +72,7 @@ public class AddStatusPacket extends Packet {
     @Override
     public void processServer(NetworkPacket packet, Server server,  ServerClient client) {
         System.out.println("Adding Stats Server! " + Name);
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(Name);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(Name);
         player.PrintStats();
         player.Constitution.value = Con;
         player.Strength.value = Str;

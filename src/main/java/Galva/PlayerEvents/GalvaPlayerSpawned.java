@@ -26,8 +26,8 @@ public class GalvaPlayerSpawned
         System.out.println(playerMob.playerName);
 
         if (playerMob != null) {
-            GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
-
+            GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
+            System.out.println("[SPAWN EVENT!]");
             System.out.println("Added spawn attributes to " + player + "!");
             player.GetAttributesPacket(client);
         }

@@ -3,7 +3,6 @@ package Galva.SaveData;
 import Galva.Status.GalvaPlayer;
 import Galva.Status.GalvaPlayers;
 import necesse.engine.modLoader.annotations.ModMethodPatch;
-import necesse.engine.save.LoadData;
 import necesse.engine.save.SaveData;
 import necesse.entity.mobs.PlayerMob;
 import net.bytebuddy.asm.Advice;
@@ -15,7 +14,7 @@ public class AttributeSaver
     static void SaveAttributes(@Advice.This PlayerMob playerMob, @Advice.Argument(0) SaveData saveData)
     {
         System.out.println("Saving Character Attributes!");
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
         saveData.addInt("Constitution", player.Constitution.value);
         saveData.addInt("Strength", player.Strength.value);
         saveData.addInt("Dexterity", player.Dexterity.value);

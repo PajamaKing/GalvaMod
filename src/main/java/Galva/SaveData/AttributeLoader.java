@@ -16,7 +16,7 @@ public class AttributeLoader
     {
         GalvaPlayers.RemovePlayer(playerMob.playerName);
         System.out.println("Entering Load Attributes!");
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
         player.Constitution.value = TryGetSaveData(loadData, "Constitution");
         player.Strength.value = TryGetSaveData(loadData, "Strength");
         player.Dexterity.value = TryGetSaveData(loadData, "Dexterity");

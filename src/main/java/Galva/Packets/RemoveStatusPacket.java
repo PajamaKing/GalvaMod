@@ -29,7 +29,7 @@ public class RemoveStatusPacket extends Packet {
     @Override
     public void processClient(NetworkPacket packet, Client client) {
         System.out.println("Removing Stats Client!");
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(client.getPlayer());
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(client.getPlayer());
         player.SendDeleteAttributesPacket(client);
     }
 
@@ -37,7 +37,7 @@ public class RemoveStatusPacket extends Packet {
     public void processServer(NetworkPacket packet, Server server, ServerClient client)
     {
         System.out.println("Removing Stats Server! " + Name);
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(Name);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(Name);
         player.RemoveStats(client.playerMob);
     }
 }

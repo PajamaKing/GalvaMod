@@ -1,7 +1,5 @@
 package Galva.Status;
 
-import necesse.engine.network.client.Client;
-import necesse.engine.network.server.ServerClient;
 import necesse.entity.mobs.PlayerMob;
 
 import java.util.ArrayList;
@@ -15,13 +13,13 @@ public class GalvaPlayers
           Players = new ArrayList<>();
     }
 
-    public static GalvaPlayer getCurrentPlayer(PlayerMob playerMob)
+    public static GalvaPlayer getPlayerByName(PlayerMob playerMob)
     {
-        return getCurrentPlayer(playerMob.playerName);
+        return getPlayerByName(playerMob.playerName);
     }
 
     //caution on usage
-    public static GalvaPlayer getCurrentPlayer(String name)
+    public static GalvaPlayer getPlayerByName(String name)
     {
         for (GalvaPlayer player : Players)
         {
@@ -35,7 +33,16 @@ public class GalvaPlayers
 
     public static void RemovePlayer(String name)
     {
-        GalvaPlayer player = getCurrentPlayer(name);
+        GalvaPlayer player = getPlayerByName(name);
         Players.remove(player);
+    }
+
+    public static boolean playerExists(String name)
+    {
+        for (GalvaPlayer player : Players)
+        {
+            if (player.PlayerName.equals(name)) return true;
+        }
+        return false;
     }
 }

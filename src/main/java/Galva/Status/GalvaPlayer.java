@@ -11,7 +11,6 @@ import necesse.engine.registries.BuffRegistry;
 import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.buffs.staticBuffs.Buff;
-import necesse.gfx.forms.FormManager;
 
 import java.util.ArrayList;
 
@@ -61,7 +60,7 @@ public class GalvaPlayer extends LevelHolder {
 
         if (Attribute.BuffID.equals("Level"))
         {
-            GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
+            GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
             player.Experience = 0;
         }
 

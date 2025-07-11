@@ -56,7 +56,8 @@ public class GalvaForm extends Form {
         //Needed to send packets
         this.client = client;
 
-        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(client.getPlayer().playerName);
+        GalvaPlayer player = GalvaPlayers.getPlayerByName(client.getPlayer().playerName);
+        //Load text if not loaded.
 
         //Text
         Con = new FormTextButton ("Constitution (" + player.Constitution.value + ")",

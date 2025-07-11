@@ -1,21 +1,13 @@
 package Galva.Leveling;
 
-import Galva.Menus.GalvaInventoryButton;
 import Galva.Packets.AddExpPacket;
 import Galva.Status.GalvaPlayer;
 import Galva.Status.GalvaPlayers;
-import necesse.engine.GlobalData;
 import necesse.engine.modLoader.annotations.ModMethodPatch;
-import necesse.engine.network.client.Client;
-import necesse.engine.network.client.ClientClient;
 import necesse.engine.network.server.ServerClient;
-import necesse.engine.state.MainGame;
-import necesse.engine.state.State;
-import necesse.entity.manager.EntityManager;
 import necesse.entity.mobs.Attacker;
 import necesse.entity.mobs.Mob;
 import necesse.entity.mobs.PlayerMob;
-import necesse.level.maps.Level;
 import net.bytebuddy.asm.Advice;
 import java.util.HashSet;
 
@@ -46,7 +38,7 @@ public class ExpDrop
                 {
                     PlayerMob playerMob = ((PlayerMob)attacker);
                     ServerClient serverClient = playerMob.getServerClient();
-                    GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
+                    GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
                     if (player.Level.value == MaxLevel)
                     {
                         return;
