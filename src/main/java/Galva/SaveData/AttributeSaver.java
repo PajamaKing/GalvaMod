@@ -13,7 +13,7 @@ public class AttributeSaver
     @Advice.OnMethodExit
     static void SaveAttributes(@Advice.This PlayerMob playerMob, @Advice.Argument(0) SaveData saveData)
     {
-        System.out.println("Saving Character Attributes!");
+        //system.out.println("Saving Character Attributes!");
         GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
         saveData.addInt("Constitution", player.Constitution.value);
         saveData.addInt("Strength", player.Strength.value);

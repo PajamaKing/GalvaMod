@@ -52,7 +52,7 @@ public class AddExpPacket extends Packet {
         PlayerMob playerMob = client.getPlayer();
         GalvaPlayer player = GalvaPlayers.getPlayerByName(client.getPlayer());
         if (player.Level.value >= MaxLevel) return;
-        System.out.println("[CLIENT] Adding XP " + value + " to player " + Name);
+        //system.out.println("[CLIENT] Adding XP " + value + " to player " + Name);
 
         //Returns true on level up
         Level level = client.getLevel();
@@ -104,7 +104,7 @@ public class AddExpPacket extends Packet {
 
     @Override
     public void processServer(NetworkPacket packet, Server server, ServerClient client) {
-        System.out.println("[SERVER] Adding XP " + value + " to player " + Name);
+        //system.out.println("[SERVER] Adding XP " + value + " to player " + Name);
         GalvaPlayer player = GalvaPlayers.getPlayerByName(Name);
 
         if (player.AddXP(value)) {

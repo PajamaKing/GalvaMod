@@ -135,7 +135,7 @@ public class GalvaForm extends Form {
     public void Add(GalvaAttribute status, GalvaPlayer player)
     {
         if (player.GetFreeStatusPoints() > 0 && status.value < MaxStatLevel){
-            System.out.println(client.getPlayer().playerName);
+            //system.out.println(client.getPlayer().playerName);
             player.SendDeleteAttributesPacket(client);
             status.value++;
             player.SendAddAttributesPacket(client);
@@ -146,7 +146,7 @@ public class GalvaForm extends Form {
     public void Subtract(GalvaAttribute status, GalvaPlayer player)
     {
         if (status.value > 1){
-            System.out.println(client.getPlayer().playerName);
+            //system.out.println(client.getPlayer().playerName);
             player.SendDeleteAttributesPacket(client);
             status.value--;
             player.SendAddAttributesPacket(client);

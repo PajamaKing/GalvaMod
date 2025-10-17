@@ -16,19 +16,19 @@ public class GalvaPlayerSpawned
     @Advice.OnMethodExit
     public static void onExit(@Advice.FieldValue(value = "client") Client client)
     {
-        System.out.println("ClientSpawn");
+        //system.out.println("ClientSpawn");
 
         if (client.getPlayer() == null){
             return;
         }
 
         PlayerMob playerMob = client.getPlayer();
-        System.out.println(playerMob.playerName);
+        //system.out.println(playerMob.playerName);
 
         if (playerMob != null) {
             GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
-            System.out.println("[SPAWN EVENT!]");
-            System.out.println("Added spawn attributes to " + player + "!");
+            //system.out.println("[SPAWN EVENT!]");
+            //system.out.println("Added spawn attributes to " + player + "!");
             player.GetAttributesPacket(client);
         }
     }

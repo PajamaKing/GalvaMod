@@ -10,13 +10,13 @@ public class LevelHolder
     public boolean AddXP(int exp)
     {
         Experience += exp;
-        System.out.println(Experience);
+        //system.out.println(Experience);
         int neededExp = GetNeededExp();
         boolean shouldLevel = Level.value < Level.value + (int)Math.floor(Experience / neededExp);
 
         if (shouldLevel)
         {
-            System.out.println("Level up!");
+            //system.out.println("Level up!");
             Experience = 0;
             return true;
         }

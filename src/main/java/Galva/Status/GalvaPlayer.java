@@ -38,7 +38,7 @@ public class GalvaPlayer extends LevelHolder {
     }
 
     public void LoadAttributes(PlayerMob player){
-        System.out.println("Reading buffs to set stuff");
+        //system.out.println("Reading buffs to set stuff");
         Constitution.value = GetActiveAttributeValue(player, Constitution);
         Strength.value = GetActiveAttributeValue(player, Strength);
         Dexterity.value = GetActiveAttributeValue(player, Dexterity);
@@ -152,7 +152,7 @@ public class GalvaPlayer extends LevelHolder {
     //Should only be used in packets or server side commands
     public void ApplyStats(PlayerMob player, int Con, int Str, int Dex, int Int, int Wis, int Lev)
     {
-        System.out.println("Adding Stats Internal " + Con + "-" + Str + "-" + Dex + "-" + Int + "-" + Wis + "-" + Lev);
+        //system.out.println("Adding Stats Internal " + Con + "-" + Str + "-" + Dex + "-" + Int + "-" + Wis + "-" + Lev);
         Constitution.value = Con;
         Strength.value = Str;
         Dexterity.value = Dex;
@@ -202,13 +202,6 @@ public class GalvaPlayer extends LevelHolder {
 
     public void PrintStats()
     {
-        System.out.println(PlayerName + "'s Stats are "
-                + Constitution.value + "-"
-                + Strength.value + "-"
-                + Dexterity.value + "-"
-                + Intelligence.value + "-"
-                + Wisdom.value + "-"
-                + Level.value + "-"
-                + Experience + "!");
+        //system.out.println(PlayerName + "'s Stats are " + Constitution.value + "-"  + Strength.value + "-" + Dexterity.value + "-"+ Intelligence.value + "-" + Wisdom.value + "-" + Level.value + "-" + Experience + "!");
     }
 }

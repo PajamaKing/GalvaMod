@@ -1,14 +1,16 @@
 package Galva.Leveling;
 
 import necesse.level.maps.biomes.Biome;
-import necesse.level.maps.biomes.desert.*;
-import necesse.level.maps.biomes.dungeon.*;
-import necesse.level.maps.biomes.forest.*;
-import necesse.level.maps.biomes.pirate.*;
-import necesse.level.maps.biomes.plains.*;
-import necesse.level.maps.biomes.snow.*;
-import necesse.level.maps.biomes.swamp.*;
-import necesse.level.maps.biomes.temple.*;
+import necesse.level.maps.biomes.PirateVillageJournalBiome;
+import necesse.level.maps.biomes.desert.DesertBiome;
+import necesse.level.maps.biomes.dungeon.DungeonBiome;
+import necesse.level.maps.biomes.forest.ForestBiome;
+import necesse.level.maps.biomes.incursions.*;
+import necesse.level.maps.biomes.plains.PlainsBiome;
+import necesse.level.maps.biomes.snow.SnowBiome;
+import necesse.level.maps.biomes.swamp.SwampBiome;
+import necesse.level.maps.biomes.temple.TempleBiome;
+import necesse.level.maps.biomes.trial.TrialRoomBiome;
 
 import java.util.ArrayList;
 
@@ -67,8 +69,10 @@ public class BiomeLevels
     {
         for (BiomeLevelMultiplier biomeMultiplier : BiomeLevels)
         {
-            if (biomeMultiplier.biome.toUpperCase().equals(biome.getClass().getSimpleName().toUpperCase()))
+            String biomeName = biome.getClass().getSimpleName().toUpperCase();
+            if (biomeMultiplier.biome.toUpperCase().equals(biomeName))
             {
+                //system.out.println(biomeName);
                 return biomeMultiplier.value;
             }
         }

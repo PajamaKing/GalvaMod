@@ -21,7 +21,7 @@ public class Galva {
     public static int MaxStatLevel = 41;
     public static int BaseStatLevel = 1;
     public void init(){
-        System.out.println("Hello world from galva mod!");
+        //system.out.println("Hello world from galva mod!");
         InitItems();
         InitBuffs();
         InitPackets();
@@ -58,7 +58,7 @@ public class Galva {
     }
 
     public void InitPackets(){
-        System.out.println("Registered packets!");
+        //system.out.println("Registered packets!");
         PacketRegistry.registerPacket(AddStatusPacket.class);
         PacketRegistry.registerPacket(RemoveStatusPacket.class);
         PacketRegistry.registerPacket(AddExpPacket.class);

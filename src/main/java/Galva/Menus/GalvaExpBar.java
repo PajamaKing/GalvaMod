@@ -23,7 +23,7 @@
 //    @Advice.OnMethodEnter()
 //    public void DrawExpBar(@Advice.Argument(1) PlayerMob playerMob)
 //    {
-//        System.out.println("This is working!");
+//        //system.out.println("This is working!");
 //        GalvaPlayer player = GalvaPlayers.getCurrentPlayer(playerMob);
 //        float xpPerc = player.Experience / player.GetNeededExp();
 //        int posX = Screen.getHudWidth() - (int) (Screen.getHudWidth() / 1.25);

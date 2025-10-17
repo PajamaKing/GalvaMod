@@ -15,7 +15,7 @@ public class AttributeLoader
     static void LoadAttributes(@Advice.This PlayerMob playerMob, @Advice.Argument(0) LoadData loadData)
     {
         GalvaPlayers.RemovePlayer(playerMob.playerName);
-        System.out.println("Entering Load Attributes!");
+        //system.out.println("Entering Load Attributes!");
         GalvaPlayer player = GalvaPlayers.getPlayerByName(playerMob);
         player.Constitution.value = TryGetSaveData(loadData, "Constitution");
         player.Strength.value = TryGetSaveData(loadData, "Strength");
@@ -25,11 +25,11 @@ public class AttributeLoader
         player.Level.value = TryGetSaveData(loadData, "Level");
         player.Experience = TryGetSaveData(loadData, "Experience");
 
-        System.out.println(player.PlayerName);
+        //system.out.println(player.PlayerName);
 
         if (player.Level.value == 0)
         {
-            System.out.println("Possible old version character! Loading Attributes by buffs!");
+            //system.out.println("Possible old version character! Loading Attributes by buffs!");
             player.LoadAttributes(playerMob);
         }
 
@@ -41,7 +41,7 @@ public class AttributeLoader
         if (loadData.hasLoadDataByName(name))
         {
             int value = loadData.getInt(name);
-            System.out.println("Loading " + name + value + "!");
+            //system.out.println("Loading " + name + value + "!");
             return value;
         }
         else
